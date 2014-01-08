@@ -8,8 +8,24 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    
+    IBOutlet NSMenu *statusMenu;
+    NSStatusItem *statusItem;
+    NSImage *statusImage;
+    NSImage *statusHighlightImage;
+    
+    IBOutlet NSWindow *preferencesWindow;
+    
+    IBOutlet NSView *generalView;
+    IBOutlet NSView *audioView;
+    IBOutlet NSView *aboutView;
+    
+    int currentViewTag;
+    
+}
 
-@property (assign) IBOutlet NSWindow *window;
+- (IBAction)showPreferences:(id)sender;
+- (IBAction)switchView:(id)sender;
 
 @end

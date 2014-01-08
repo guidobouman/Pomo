@@ -11,13 +11,17 @@
 		C50E3F82187DEB8100A060BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C50E3F80187DEB8100A060BD /* InfoPlist.strings */; };
 		C50E3F84187DEB8100A060BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E3F83187DEB8100A060BD /* main.m */; };
 		C50E3F88187DEB8100A060BD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C50E3F86187DEB8100A060BD /* Credits.rtf */; };
-		C50E3F8B187DEB8100A060BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E3F8A187DEB8100A060BD /* AppDelegate.m */; };
-		C50E3F8E187DEB8100A060BD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50E3F8C187DEB8100A060BD /* MainMenu.xib */; };
 		C50E3F90187DEB8100A060BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50E3F8F187DEB8100A060BD /* Images.xcassets */; };
 		C50E3F97187DEB8200A060BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50E3F96187DEB8200A060BD /* XCTest.framework */; };
 		C50E3F98187DEB8200A060BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50E3F77187DEB8100A060BD /* Cocoa.framework */; };
 		C50E3FA0187DEB8200A060BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C50E3F9E187DEB8200A060BD /* InfoPlist.strings */; };
 		C50E3FA2187DEB8200A060BD /* PomoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E3FA1187DEB8200A060BD /* PomoTests.m */; };
+		C50E3FB4187DEBE600A060BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E3FAC187DEBE600A060BD /* AppDelegate.m */; };
+		C50E3FB5187DEBE600A060BD /* Highlight Icon Big.png in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FAD187DEBE600A060BD /* Highlight Icon Big.png */; };
+		C50E3FB6187DEBE600A060BD /* Highlight Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FAE187DEBE600A060BD /* Highlight Icon.png */; };
+		C50E3FB7187DEBE600A060BD /* Icon Big.png in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FAF187DEBE600A060BD /* Icon Big.png */; };
+		C50E3FB8187DEBE600A060BD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FB0187DEBE600A060BD /* Icon.png */; };
+		C50E3FBC187DEC8100A060BD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FBB187DEC8100A060BD /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,15 +45,19 @@
 		C50E3F83187DEB8100A060BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C50E3F85187DEB8100A060BD /* Pomo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pomo-Prefix.pch"; sourceTree = "<group>"; };
 		C50E3F87187DEB8100A060BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		C50E3F89187DEB8100A060BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C50E3F8A187DEB8100A060BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C50E3F8D187DEB8100A060BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C50E3F8F187DEB8100A060BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C50E3F95187DEB8200A060BD /* PomoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50E3F96187DEB8200A060BD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C50E3F9D187DEB8200A060BD /* PomoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PomoTests-Info.plist"; sourceTree = "<group>"; };
 		C50E3F9F187DEB8200A060BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C50E3FA1187DEB8200A060BD /* PomoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PomoTests.m; sourceTree = "<group>"; };
+		C50E3FAB187DEBE600A060BD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C50E3FAC187DEBE600A060BD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C50E3FAD187DEBE600A060BD /* Highlight Icon Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Highlight Icon Big.png"; sourceTree = "<group>"; };
+		C50E3FAE187DEBE600A060BD /* Highlight Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Highlight Icon.png"; sourceTree = "<group>"; };
+		C50E3FAF187DEBE600A060BD /* Icon Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon Big.png"; sourceTree = "<group>"; };
+		C50E3FB0187DEBE600A060BD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C50E3FBB187DEC8100A060BD /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +123,13 @@
 		C50E3F7D187DEB8100A060BD /* Pomo */ = {
 			isa = PBXGroup;
 			children = (
-				C50E3F89187DEB8100A060BD /* AppDelegate.h */,
-				C50E3F8A187DEB8100A060BD /* AppDelegate.m */,
-				C50E3F8C187DEB8100A060BD /* MainMenu.xib */,
+				C50E3FAB187DEBE600A060BD /* AppDelegate.h */,
+				C50E3FAC187DEBE600A060BD /* AppDelegate.m */,
+				C50E3FAD187DEBE600A060BD /* Highlight Icon Big.png */,
+				C50E3FAE187DEBE600A060BD /* Highlight Icon.png */,
+				C50E3FAF187DEBE600A060BD /* Icon Big.png */,
+				C50E3FBB187DEC8100A060BD /* MainMenu.xib */,
+				C50E3FB0187DEBE600A060BD /* Icon.png */,
 				C50E3F8F187DEB8100A060BD /* Images.xcassets */,
 				C50E3F7E187DEB8100A060BD /* Supporting Files */,
 			);
@@ -230,10 +242,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50E3FB6187DEBE600A060BD /* Highlight Icon.png in Resources */,
+				C50E3FB5187DEBE600A060BD /* Highlight Icon Big.png in Resources */,
 				C50E3F82187DEB8100A060BD /* InfoPlist.strings in Resources */,
 				C50E3F90187DEB8100A060BD /* Images.xcassets in Resources */,
+				C50E3FB7187DEBE600A060BD /* Icon Big.png in Resources */,
+				C50E3FB8187DEBE600A060BD /* Icon.png in Resources */,
 				C50E3F88187DEB8100A060BD /* Credits.rtf in Resources */,
-				C50E3F8E187DEB8100A060BD /* MainMenu.xib in Resources */,
+				C50E3FBC187DEC8100A060BD /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C50E3F8B187DEB8100A060BD /* AppDelegate.m in Sources */,
+				C50E3FB4187DEBE600A060BD /* AppDelegate.m in Sources */,
 				C50E3F84187DEB8100A060BD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,14 +306,6 @@
 				C50E3F87187DEB8100A060BD /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		C50E3F8C187DEB8100A060BD /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C50E3F8D187DEB8100A060BD /* Base */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		C50E3F9E187DEB8200A060BD /* InfoPlist.strings */ = {
@@ -383,11 +391,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pomo/Pomo-Prefix.pch";
 				INFOPLIST_FILE = "Pomo/Pomo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -396,11 +407,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pomo/Pomo-Prefix.pch";
 				INFOPLIST_FILE = "Pomo/Pomo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -464,6 +478,7 @@
 				C50E3FA7187DEB8200A060BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C50E3FA8187DEB8200A060BD /* Build configuration list for PBXNativeTarget "PomoTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +487,7 @@
 				C50E3FAA187DEB8200A060BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

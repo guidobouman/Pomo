@@ -47,7 +47,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Pomo Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="4eg-0P-PT5" customClass="preferenceWindow">
+        <window title="Pomo Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="4eg-0P-PT5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
             <rect key="contentRect" x="494" y="259" width="480" height="92"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
@@ -68,7 +68,7 @@
                             <action selector="switchView:" target="494" id="8gk-as-9Pc"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="DF5AE782-5155-44C6-961E-629A9A1AB57E" label="About" paletteLabel="About" tag="2" image="039209EA-BDBB-4795-9840-23E01221B15B" selectable="YES" id="P3m-9P-qIw">
+                    <toolbarItem implicitItemIdentifier="DF5AE782-5155-44C6-961E-629A9A1AB57E" label="About" paletteLabel="About" tag="2" image="DEF6A0B6-4B2A-419C-832B-1A2497E6B0F6" selectable="YES" id="P3m-9P-qIw">
                         <connections>
                             <action selector="switchView:" target="494" id="Ewc-YH-nRp"/>
                         </connections>
@@ -129,7 +129,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="039209EA-BDBB-4795-9840-23E01221B15B" width="325" height="314">
+        <image name="DEF6A0B6-4B2A-419C-832B-1A2497E6B0F6" width="325" height="314">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
