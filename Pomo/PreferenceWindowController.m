@@ -37,7 +37,6 @@
 
 - (IBAction)showPreferenceWindow:(id)sender {
     
-    NSLog(@"Aye!");
     [NSApp activateIgnoringOtherApps:YES];
     [preferenceWindow setLevel:1];
     [preferenceWindow makeKeyAndOrderFront:self];
