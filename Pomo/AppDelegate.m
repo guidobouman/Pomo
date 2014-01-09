@@ -13,15 +13,16 @@
 
 - (void)awakeFromNib {
     
-    NSBundle *bundle = [NSBundle mainBundle];
-    statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Icon" ofType:@"png"]];
-    statusHighlightImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Highlight Icon" ofType:@"png"]];
-    
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:statusMenu];
-    [statusItem setImage:statusImage];
-    [statusItem setAlternateImage:statusHighlightImage];
     [statusItem setHighlightMode:YES];
+    [statusItem setTitle:@"0:00"];
+    
+    //NSBundle *bundle = [NSBundle mainBundle];
+    //statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Icon" ofType:@"png"]];
+    //statusHighlightImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Highlight Icon" ofType:@"png"]];
+    //[statusItem setImage:statusImage];
+    //[statusItem setAlternateImage:statusHighlightImage];
     
     if(!preferenceWindowController) {
         preferenceWindowController = [[PreferenceWindowController alloc] init];
