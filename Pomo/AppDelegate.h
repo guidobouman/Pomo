@@ -8,24 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class PreferenceWindowController;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
+    
+    PreferenceWindowController *preferenceWindowController;
     
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
     NSImage *statusImage;
     NSImage *statusHighlightImage;
     
-    IBOutlet NSWindow *preferencesWindow;
-    
-    IBOutlet NSView *generalView;
-    IBOutlet NSView *audioView;
-    IBOutlet NSView *aboutView;
-    
-    int currentViewTag;
-    
 }
 
 - (IBAction)showPreferences:(id)sender;
-- (IBAction)switchView:(id)sender;
 
 @end
