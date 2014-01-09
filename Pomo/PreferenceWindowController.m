@@ -35,7 +35,7 @@
 }
 
 
-- (IBAction)showPreferenceWindow:(id)sender {
+- (IBAction)showPreferenceWindow {
     
     [NSApp activateIgnoringOtherApps:YES];
     [preferenceWindow setLevel:1];
@@ -102,6 +102,32 @@
     }
     
     return view;
+    
+}
+
+// -- Settings sections
+
+- (IBAction)loadPreferences {
+    
+    
+    
+}
+
+- (IBAction)savePreferences:(id)sender {
+    
+    
+    NSLog(@"Work duration:    %i", workDurationStepper.intValue);
+    NSLog(@"Break duration:   %i", breakDurationStepper.intValue);
+    NSLog(@"Repeat sessions:  %i", repeatSessionsCheckbox.intValue);
+    NSLog(@"Launch at login:  %i", launchAtLoginCheckbox.intValue);
+    
+    NSLog(@"Play work sound:  %i", workSoundCheckbox.intValue);
+    NSLog(@"Play break sound: %i", breakSoundCheckbox.intValue);
+    NSLog(@"Volume level:     %i", outputVolumeSlider.intValue);
+    
+    
+    [workDurationField setIntValue:workDurationStepper.intValue];
+    [breakDurationField setIntValue:breakDurationStepper.intValue];
     
 }
 

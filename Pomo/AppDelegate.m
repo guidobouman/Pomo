@@ -32,7 +32,7 @@
 
 - (IBAction)showPreferences:(id)sender {
     
-    [preferenceWindowController showPreferenceWindow:nil];
+    [preferenceWindowController showPreferenceWindow];
     
 }
 

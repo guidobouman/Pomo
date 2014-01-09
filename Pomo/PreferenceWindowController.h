@@ -19,10 +19,26 @@
     IBOutlet NSView *aboutView;
     
     int currentViewTag;
-
+    
+    // -- Settings
+    
+    IBOutlet NSTextField *workDurationField;
+    IBOutlet NSTextField *breakDurationField;
+    IBOutlet NSStepper *workDurationStepper;
+    IBOutlet NSStepper *breakDurationStepper;
+    IBOutlet NSButton *repeatSessionsCheckbox;
+    IBOutlet NSButton *launchAtLoginCheckbox;
+    
+    IBOutlet NSButton *workSoundCheckbox;
+    IBOutlet NSButton *breakSoundCheckbox;
+    IBOutlet NSSlider *outputVolumeSlider;
 }
 
-- (IBAction)showPreferenceWindow:(id)sender;
+- (IBAction)showPreferenceWindow;
+
 - (IBAction)switchView:(id)sender;
+
+- (IBAction)loadPreferences;
+- (IBAction)savePreferences:(id)sender;
 
 @end
