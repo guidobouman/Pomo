@@ -28,6 +28,8 @@
         preferenceWindowController = [[PreferenceWindowController alloc] init];
     }
     
+//    [self showPreferences:nil];
+    
 }
 
 - (IBAction)showPreferences:(id)sender {
