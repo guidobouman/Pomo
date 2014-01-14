@@ -32,7 +32,7 @@
                 <menuItem title="Preferences..." id="49d-7J-lV9">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="showPreferences:" target="494" id="SAv-bJ-XDK"/>
+                        <action selector="showPreferences:" target="494" id="vRx-hi-GOq"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" id="hrA-MT-mxz">

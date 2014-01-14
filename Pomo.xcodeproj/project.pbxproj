@@ -27,6 +27,7 @@
 		C5321598187E21EF003BAB41 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321595187E21EF003BAB41 /* clock.png */; };
 		C5321599187E21EF003BAB41 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321596187E21EF003BAB41 /* heart.png */; };
 		C532159A187E21EF003BAB41 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321597187E21EF003BAB41 /* speaker.png */; };
+		C542CBA81885EE4C0056CF30 /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C542CBA71885EE4C0056CF30 /* UserDefaults.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		C5321595187E21EF003BAB41 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		C5321596187E21EF003BAB41 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		C5321597187E21EF003BAB41 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
+		C542CBA71885EE4C0056CF30 /* UserDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserDefaults.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				C50E3FBB187DEC8100A060BD /* MainMenu.xib */,
 				C532158F187DF336003BAB41 /* PreferenceWindowController.h */,
 				C5321590187DF336003BAB41 /* PreferenceWindowController.m */,
+				C542CBA71885EE4C0056CF30 /* UserDefaults.plist */,
 				C5321591187DF336003BAB41 /* PreferenceWindow.xib */,
 				C5321594187E0615003BAB41 /* Images */,
 				C50E3F8F187DEB8100A060BD /* Images.xcassets */,
@@ -281,6 +284,7 @@
 				C532159A187E21EF003BAB41 /* speaker.png in Resources */,
 				C5321599187E21EF003BAB41 /* heart.png in Resources */,
 				C50E3FB5187DEBE600A060BD /* Highlight Icon Big.png in Resources */,
+				C542CBA81885EE4C0056CF30 /* UserDefaults.plist in Resources */,
 				C50E3F82187DEB8100A060BD /* InfoPlist.strings in Resources */,
 				C50E3F90187DEB8100A060BD /* Images.xcassets in Resources */,
 				C50E3FB7187DEBE600A060BD /* Icon Big.png in Resources */,

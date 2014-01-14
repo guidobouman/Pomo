@@ -78,18 +78,21 @@
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQC-3u-zf9" userLabel="workDurationField">
                     <rect key="frame" x="203" y="122" width="25" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="25" placeholderString="" drawsBackground="YES" usesSingleLineMode="YES" id="vj6-6x-W8H">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="25" placeholderString="" drawsBackground="YES" usesSingleLineMode="YES" id="vj6-6x-W8H">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.workDuration" id="A2w-xp-omV"/>
+                    </connections>
                 </textField>
                 <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UbF-s9-ysH" userLabel="workDurationStepper">
                     <rect key="frame" x="230" y="119" width="19" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <stepperCell key="cell" continuous="YES" alignment="left" increment="5" minValue="5" maxValue="90" doubleValue="25" id="U4O-8y-fQA"/>
                     <connections>
-                        <action selector="savePreferences:" target="-2" id="zdq-MP-HEL"/>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.workDuration" id="51p-bM-WqZ"/>
                     </connections>
                 </stepper>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eoS-ze-SiL">
@@ -113,18 +116,21 @@
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKV-5C-zAU" userLabel="breakDurationField">
                     <rect key="frame" x="204" y="95" width="25" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="5" placeholderString="" drawsBackground="YES" usesSingleLineMode="YES" id="ix9-QM-9gk">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="5" placeholderString="" drawsBackground="YES" usesSingleLineMode="YES" id="ix9-QM-9gk">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.breakDuration" id="Ee6-B6-aAh"/>
+                    </connections>
                 </textField>
                 <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxd-3C-Nc1" userLabel="breakDurationStepper">
                     <rect key="frame" x="230" y="92" width="19" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <stepperCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="60" doubleValue="5" id="7hu-IC-enT"/>
                     <connections>
-                        <action selector="savePreferences:" target="-2" id="Foh-uS-izc"/>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.breakDuration" id="mh0-a7-aUh"/>
                     </connections>
                 </stepper>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80l-0L-Byc">
@@ -153,7 +159,7 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="savePreferences:" target="-2" id="o7s-cB-dvJ"/>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.repeatSessions" id="mqi-Eb-zJs"/>
                     </connections>
                 </button>
                 <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="EVR-IX-hcZ" userLabel="Separator">
@@ -183,7 +189,8 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="savePreferences:" target="-2" id="6yp-h9-hOv"/>
+                        <action selector="setLaunchAtLogin:" target="-2" id="qcs-Eb-aeE"/>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.launchAtLogin" id="v11-Ml-KkJ"/>
                     </connections>
                 </button>
             </subviews>
@@ -209,7 +216,7 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="savePreferences:" target="-2" id="bCR-lt-Ofm"/>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.workSound" id="DwV-au-Aft"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bc9-9b-RD9" userLabel="breakSoundCheckbox">
@@ -220,7 +227,7 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="savePreferences:" target="-2" id="rwb-RI-7eW"/>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.breakSound" id="QUA-ec-gJl"/>
                     </connections>
                 </button>
                 <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="yWt-I5-lBP" userLabel="Separator">
@@ -247,7 +254,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="below" numberOfTickMarks="11" sliderType="linear" id="uXU-SP-QBX"/>
                     <connections>
-                        <action selector="savePreferences:" target="-2" id="bzF-ab-fBF"/>
+                        <binding destination="JY7-Tl-5SC" name="value" keyPath="values.outputVolume" id="LDh-XN-8f9"/>
                     </connections>
                 </slider>
             </subviews>
@@ -295,6 +302,7 @@
                 </textField>
             </subviews>
         </customView>
+        <userDefaultsController representsSharedInstance="YES" id="JY7-Tl-5SC"/>
     </objects>
     <resources>
         <image name="clock" width="32" height="32"/>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>launchAtLogin</key>
+	<false/>
+	<key>workDuration</key>
+	<integer>25</integer>
+	<key>breakDuration</key>
+	<integer>5</integer>
+	<key>repeatSessions</key>
+	<true/>
+	<key>workSound</key>
+	<true/>
+	<key>breakSound</key>
+	<true/>
+	<key>outputVolume</key>
+	<integer>50</integer>
+</dict>
+</plist>

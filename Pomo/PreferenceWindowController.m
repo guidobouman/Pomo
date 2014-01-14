@@ -17,12 +17,10 @@
         
         [self showWindow:nil];
         
-        // Load general as default view
-        [toolbar setSelectedItemIdentifier:@"general"];
-        [preferenceWindow setTitle:@"General"];
-        [preferenceWindow setContentSize:[generalView frame].size];
-        [[preferenceWindow contentView] addSubview:generalView];
+//        NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+//        [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
         
+        [self setupDefaults];
         
     }
     return self;
@@ -31,6 +29,35 @@
 - (void)windowDidLoad {
     
     [super windowDidLoad];
+    
+    // Load general as default view.
+    [toolbar setSelectedItemIdentifier:@"general"];
+    [preferenceWindow setTitle:@"General"];
+    [preferenceWindow setContentSize:[generalView frame].size];
+    [[preferenceWindow contentView] addSubview:generalView];
+    
+}
+
+- (IBAction)setLaunchAtLogin:(id)sender {
+    
+    if([sender state]) {
+        NSLog(@"Launch at login!");
+    }
+    else {
+        NSLog(@"Don't launch.");
+    }
+    
+}
+
+- (void)setupDefaults
+{
+    
+    NSString *userDefaultsValuesPath;
+    NSDictionary *userDefaultsValuesDict;
+    
+    userDefaultsValuesPath=[[NSBundle mainBundle] pathForResource:@"UserDefaults" ofType:@"plist"];
+    userDefaultsValuesDict=[NSDictionary dictionaryWithContentsOfFile:userDefaultsValuesPath];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsValuesDict];
     
 }
 
@@ -102,32 +129,6 @@
     }
     
     return view;
-    
-}
-
-// -- Settings sections
-
-- (IBAction)loadPreferences {
-    
-    
-    
-}
-
-- (IBAction)savePreferences:(id)sender {
-    
-    
-    NSLog(@"Work duration:    %i", workDurationStepper.intValue);
-    NSLog(@"Break duration:   %i", breakDurationStepper.intValue);
-    NSLog(@"Repeat sessions:  %i", repeatSessionsCheckbox.intValue);
-    NSLog(@"Launch at login:  %i", launchAtLoginCheckbox.intValue);
-    
-    NSLog(@"Play work sound:  %i", workSoundCheckbox.intValue);
-    NSLog(@"Play break sound: %i", breakSoundCheckbox.intValue);
-    NSLog(@"Volume level:     %i", outputVolumeSlider.intValue);
-    
-    
-    [workDurationField setIntValue:workDurationStepper.intValue];
-    [breakDurationField setIntValue:breakDurationStepper.intValue];
     
 }
 

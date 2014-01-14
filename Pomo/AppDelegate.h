@@ -19,8 +19,19 @@
     NSImage *statusImage;
     NSImage *statusHighlightImage;
     
+    
+    int workDuration;
+    int breakDuration;
+    int repeatSessions;
+    int launchAtLogin;
+    
+    int workSound;
+    int breakSound;
+    int outputVolume;
+    
 }
 
 - (IBAction)showPreferences:(id)sender;
+- (void)loadPreferences:(NSUserDefaults *)defaults;
 
 @end

@@ -18,11 +18,11 @@
     [statusItem setHighlightMode:YES];
     [statusItem setTitle:@"0:00"];
     
-    //NSBundle *bundle = [NSBundle mainBundle];
-    //statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Icon" ofType:@"png"]];
-    //statusHighlightImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Highlight Icon" ofType:@"png"]];
-    //[statusItem setImage:statusImage];
-    //[statusItem setAlternateImage:statusHighlightImage];
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self
+               selector:@selector(defaultsChanged:)
+                   name:NSUserDefaultsDidChangeNotification
+                 object:nil];
     
     if(!preferenceWindowController) {
         preferenceWindowController = [[PreferenceWindowController alloc] init];
@@ -33,6 +33,29 @@
 - (IBAction)showPreferences:(id)sender {
     
     [preferenceWindowController showPreferenceWindow];
+    
+}
+
+- (void)defaultsChanged:(NSNotification *)notification {
+    
+    NSUserDefaults *defaults = (NSUserDefaults *)[notification object];
+    
+    [self loadPreferences:defaults];
+    
+}
+
+- (void)loadPreferences:(NSUserDefaults *)defaults {
+    
+    workDuration = (int)[defaults integerForKey:@"workDuration"];
+    breakDuration = (int)[defaults integerForKey:@"breakDuration"];
+    repeatSessions = [defaults boolForKey:@"repeatSessions"];
+    
+    workSound = [defaults boolForKey:@"workSound"];
+    breakSound = [defaults boolForKey:@"breakSound"];
+    outputVolume = (int)[defaults integerForKey:@"outputVolume"];
+    
+    
+    NSLog(@"Output volume: %i", outputVolume);
     
 }
 
