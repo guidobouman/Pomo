@@ -36,6 +36,9 @@
     [preferenceWindow setContentSize:[generalView frame].size];
     [[preferenceWindow contentView] addSubview:generalView];
     
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    [versionLabel setStringValue:[NSString stringWithFormat:@"Pomo v%@", version]];
+    
 }
 
 - (IBAction)setLaunchAtLogin:(id)sender {

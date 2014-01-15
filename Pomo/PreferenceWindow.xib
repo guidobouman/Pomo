@@ -17,6 +17,7 @@
                 <outlet property="preferenceWindow" destination="VYU-3v-aWT" id="VRm-wc-CXH"/>
                 <outlet property="repeatSessionsCheckbox" destination="Sxn-EI-dEP" id="COs-HF-lPd"/>
                 <outlet property="toolbar" destination="aI9-5b-Oir" id="kTm-Ui-j7V"/>
+                <outlet property="versionLabel" destination="2r8-jA-MCU" id="1Fu-jd-wZI"/>
                 <outlet property="workDurationField" destination="fQC-3u-zf9" id="0yZ-ps-OVx"/>
                 <outlet property="workDurationStepper" destination="UbF-s9-ysH" id="ivs-ar-mlP"/>
                 <outlet property="workSoundCheckbox" destination="BED-UH-TOZ" id="oUl-f1-o63"/>
@@ -24,7 +25,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
-        <window title="Pomo Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="VYU-3v-aWT">
+        <window title="Pomo Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="VYU-3v-aWT" userLabel="preferencesWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="494" y="259" width="480" height="100"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
@@ -62,11 +63,11 @@
                 </defaultToolbarItems>
             </toolbar>
         </window>
-        <customView id="ho5-Bw-a56" userLabel="General">
+        <customView id="ho5-Bw-a56" userLabel="generalView">
             <rect key="frame" x="0.0" y="0.0" width="480" height="164"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mOQ-ca-DU9">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mOQ-ca-DU9" userLabel="workDurationLabel">
                     <rect key="frame" x="51" y="125" width="147" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Work session duration:" id="Yj9-NM-2Te">
@@ -95,7 +96,7 @@
                         <binding destination="JY7-Tl-5SC" name="value" keyPath="values.workDuration" id="51p-bM-WqZ"/>
                     </connections>
                 </stepper>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eoS-ze-SiL">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eoS-ze-SiL" userLabel="workMinutesLabel">
                     <rect key="frame" x="248" y="125" width="59" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="minutes." id="IDF-cC-H6a">
@@ -104,7 +105,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRn-UC-cyx">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRn-UC-cyx" userLabel="breakDurationLabel">
                     <rect key="frame" x="97" y="98" width="101" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Break duration:" id="GMA-2s-pK5">
@@ -133,7 +134,7 @@
                         <binding destination="JY7-Tl-5SC" name="value" keyPath="values.breakDuration" id="mh0-a7-aUh"/>
                     </connections>
                 </stepper>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80l-0L-Byc">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80l-0L-Byc" userLabel="breakMinutesLabel">
                     <rect key="frame" x="248" y="98" width="59" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="minutes." id="nLH-So-J0h">
@@ -142,7 +143,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hm-Qe-UkS">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hm-Qe-UkS" userLabel="repeatSessionsLabel">
                     <rect key="frame" x="78" y="72" width="120" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Continuous mode:" id="RSG-pm-pFl">
@@ -172,7 +173,7 @@
                     <color key="borderColor" red="0.50112516983695654" green="0.50112516983695654" blue="0.50112516983695654" alpha="0.5" colorSpace="calibratedRGB"/>
                     <color key="fillColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                 </box>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-OQ-atJ">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-OQ-atJ" userLabel="launchAtLoginLabel">
                     <rect key="frame" x="144" y="19" width="54" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Startup:" id="lS8-Xm-ttA">
@@ -195,11 +196,11 @@
                 </button>
             </subviews>
         </customView>
-        <customView id="1hl-wy-KQ5" userLabel="Audio">
+        <customView id="1hl-wy-KQ5" userLabel="audioView">
             <rect key="frame" x="0.0" y="0.0" width="480" height="139"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7LT-xg-kzn">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7LT-xg-kzn" userLabel="playSoundLabel">
                     <rect key="frame" x="59" y="102" width="87" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Play a sound:" id="vse-Ud-ERa">
@@ -240,7 +241,7 @@
                     <color key="borderColor" red="0.50112516979999999" green="0.50112516979999999" blue="0.50112516979999999" alpha="0.5" colorSpace="calibratedRGB"/>
                     <color key="fillColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                 </box>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3Y-9l-XPN">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3Y-9l-XPN" userLabel="outputVolumeLabel">
                     <rect key="frame" x="43" y="29" width="103" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Output volume:" id="lV1-CZ-Ov0">
@@ -259,11 +260,11 @@
                 </slider>
             </subviews>
         </customView>
-        <customView id="Ga0-zX-m0l" userLabel="About">
+        <customView id="Ga0-zX-m0l" userLabel="aboutView">
             <rect key="frame" x="0.0" y="0.0" width="480" height="107"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQQ-vW-mKo">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQQ-vW-mKo" userLabel="authorLabel">
                     <rect key="frame" x="68" y="70" width="344" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pomo is crafted by Guido Bouman in The Netherlands." id="xgi-1n-dZv">
@@ -282,19 +283,19 @@
                     <color key="borderColor" red="0.50112516979999999" green="0.50112516979999999" blue="0.50112516979999999" alpha="0.5" colorSpace="calibratedRGB"/>
                     <color key="fillColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                 </box>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rN9-Z6-jb3">
-                    <rect key="frame" x="43" y="20" width="83" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXP-A3-ifx" userLabel="urlLabel">
+                    <rect key="frame" x="328" y="20" width="109" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pomo v0.1.2" id="xqY-Tw-sB5">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="http://guido.vc/" id="YUb-a4-kPD">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXP-A3-ifx">
-                    <rect key="frame" x="328" y="20" width="109" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2r8-jA-MCU" userLabel="versionLabel">
+                    <rect key="frame" x="43" y="20" width="83" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="http://guido.vc/" id="YUb-a4-kPD">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pomo v0.0.0" id="wgH-tg-l7s">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

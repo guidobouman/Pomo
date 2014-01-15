@@ -20,6 +20,8 @@
     
     int currentViewTag;
     
+    IBOutlet NSTextField *versionLabel;
+    
 }
 
 - (IBAction)showPreferenceWindow;
