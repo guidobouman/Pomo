@@ -57,7 +57,7 @@
     outputVolume = (int)[defaults integerForKey:@"outputVolume"];
     
     
-    NSLog(@"Output volume: %i", outputVolume);
+//    NSLog(@"Output volume: %i", outputVolume);
     
 }
 

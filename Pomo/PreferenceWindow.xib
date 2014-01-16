@@ -210,9 +210,9 @@
                     </textFieldCell>
                 </textField>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BED-UH-TOZ" userLabel="workSoundCheckbox">
-                    <rect key="frame" x="150" y="101" width="239" height="18"/>
+                    <rect key="frame" x="150" y="101" width="231" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="When completeing a work session." bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="s7J-WL-ttn">
+                    <buttonCell key="cell" type="check" title="When completing a work session." bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="s7J-WL-ttn">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>

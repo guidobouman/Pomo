@@ -7,6 +7,7 @@
 //
 
 #import "PreferenceWindowController.h"
+#import <ServiceManagement/ServiceManagement.h>
 
 @implementation PreferenceWindowController
 
@@ -44,10 +45,25 @@
 - (IBAction)setLaunchAtLogin:(id)sender {
     
     if([sender state]) {
-        NSLog(@"Launch at login!");
-    }
-    else {
-        NSLog(@"Don't launch.");
+        // Turn on launch at login
+        if (!SMLoginItemSetEnabled ((__bridge CFStringRef)@"com.guidobouman.LoginHelper", YES)) {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
+                                             defaultButton:@"OK"
+                                           alternateButton:nil
+                                               otherButton:nil
+                                 informativeTextWithFormat:@"Couldn't add Helper App to launch at login item list."];
+            [alert runModal];
+        }
+    } else {
+        // Turn off launch at login
+        if (!SMLoginItemSetEnabled ((__bridge CFStringRef)@"com.guidobouman.LoginHelper", NO)) {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
+                                             defaultButton:@"OK"
+                                           alternateButton:nil
+                                               otherButton:nil
+                                 informativeTextWithFormat:@"Couldn't remove Helper App from launch at login item list."];
+            [alert runModal];
+        }
     }
     
 }

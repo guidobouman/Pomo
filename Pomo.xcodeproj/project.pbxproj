@@ -17,10 +17,6 @@
 		C50E3FA0187DEB8200A060BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C50E3F9E187DEB8200A060BD /* InfoPlist.strings */; };
 		C50E3FA2187DEB8200A060BD /* PomoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E3FA1187DEB8200A060BD /* PomoTests.m */; };
 		C50E3FB4187DEBE600A060BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C50E3FAC187DEBE600A060BD /* AppDelegate.m */; };
-		C50E3FB5187DEBE600A060BD /* Highlight Icon Big.png in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FAD187DEBE600A060BD /* Highlight Icon Big.png */; };
-		C50E3FB6187DEBE600A060BD /* Highlight Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FAE187DEBE600A060BD /* Highlight Icon.png */; };
-		C50E3FB7187DEBE600A060BD /* Icon Big.png in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FAF187DEBE600A060BD /* Icon Big.png */; };
-		C50E3FB8187DEBE600A060BD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FB0187DEBE600A060BD /* Icon.png */; };
 		C50E3FBC187DEC8100A060BD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FBB187DEC8100A060BD /* MainMenu.xib */; };
 		C5321592187DF336003BAB41 /* PreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5321590187DF336003BAB41 /* PreferenceWindowController.m */; };
 		C5321593187DF336003BAB41 /* PreferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5321591187DF336003BAB41 /* PreferenceWindow.xib */; };
@@ -28,6 +24,8 @@
 		C5321599187E21EF003BAB41 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321596187E21EF003BAB41 /* heart.png */; };
 		C532159A187E21EF003BAB41 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321597187E21EF003BAB41 /* speaker.png */; };
 		C542CBA81885EE4C0056CF30 /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C542CBA71885EE4C0056CF30 /* UserDefaults.plist */; };
+		C542CBF81886C5A30056CF30 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C542CBF71886C5A30056CF30 /* ServiceManagement.framework */; };
+		C542CC421886C7BE0056CF30 /* LoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = C542CC3F1886C7A90056CF30 /* LoginHelper.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +36,34 @@
 			remoteGlobalIDString = C50E3F73187DEB8100A060BD;
 			remoteInfo = Pomo;
 		};
+		C542CC3E1886C7A90056CF30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C542CC391886C7A80056CF30 /* LoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C542CC021886C7A80056CF30;
+			remoteInfo = LoginHelper;
+		};
+		C542CC401886C7A90056CF30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C542CC391886C7A80056CF30 /* LoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C542CC231886C7A80056CF30;
+			remoteInfo = LoginHelperTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C542CBF51886C5250056CF30 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 7;
+			files = (
+				C542CC421886C7BE0056CF30 /* LoginHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C50E3F74187DEB8100A060BD /* Pomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,10 +84,6 @@
 		C50E3FA1187DEB8200A060BD /* PomoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PomoTests.m; sourceTree = "<group>"; };
 		C50E3FAB187DEBE600A060BD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C50E3FAC187DEBE600A060BD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C50E3FAD187DEBE600A060BD /* Highlight Icon Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Highlight Icon Big.png"; sourceTree = "<group>"; };
-		C50E3FAE187DEBE600A060BD /* Highlight Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Highlight Icon.png"; sourceTree = "<group>"; };
-		C50E3FAF187DEBE600A060BD /* Icon Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon Big.png"; sourceTree = "<group>"; };
-		C50E3FB0187DEBE600A060BD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		C50E3FBB187DEC8100A060BD /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		C50E3FBD187DF06D00A060BD /* Pomo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pomo.entitlements; sourceTree = "<group>"; };
 		C532158F187DF336003BAB41 /* PreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceWindowController.h; sourceTree = "<group>"; };
@@ -72,6 +93,8 @@
 		C5321596187E21EF003BAB41 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		C5321597187E21EF003BAB41 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		C542CBA71885EE4C0056CF30 /* UserDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserDefaults.plist; sourceTree = "<group>"; };
+		C542CBF71886C5A30056CF30 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		C542CC391886C7A80056CF30 /* LoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoginHelper.xcodeproj; path = LoginHelper/LoginHelper.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C542CBF81886C5A30056CF30 /* ServiceManagement.framework in Frameworks */,
 				C50E3F78187DEB8100A060BD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +122,7 @@
 		C50E3F6B187DEB8100A060BD = {
 			isa = PBXGroup;
 			children = (
+				C542CC391886C7A80056CF30 /* LoginHelper.xcodeproj */,
 				C50E3F7D187DEB8100A060BD /* Pomo */,
 				C50E3F9B187DEB8200A060BD /* PomoTests */,
 				C50E3F76187DEB8100A060BD /* Frameworks */,
@@ -117,6 +142,7 @@
 		C50E3F76187DEB8100A060BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C542CBF71886C5A30056CF30 /* ServiceManagement.framework */,
 				C50E3F77187DEB8100A060BD /* Cocoa.framework */,
 				C50E3F96187DEB8200A060BD /* XCTest.framework */,
 				C50E3F79187DEB8100A060BD /* Other Frameworks */,
@@ -188,12 +214,17 @@
 				C5321595187E21EF003BAB41 /* clock.png */,
 				C5321596187E21EF003BAB41 /* heart.png */,
 				C5321597187E21EF003BAB41 /* speaker.png */,
-				C50E3FAD187DEBE600A060BD /* Highlight Icon Big.png */,
-				C50E3FAE187DEBE600A060BD /* Highlight Icon.png */,
-				C50E3FAF187DEBE600A060BD /* Icon Big.png */,
-				C50E3FB0187DEBE600A060BD /* Icon.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		C542CC3A1886C7A80056CF30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C542CC3F1886C7A90056CF30 /* LoginHelper.app */,
+				C542CC411886C7A90056CF30 /* LoginHelperTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +298,12 @@
 			mainGroup = C50E3F6B187DEB8100A060BD;
 			productRefGroup = C50E3F75187DEB8100A060BD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C542CC3A1886C7A80056CF30 /* Products */;
+					ProjectRef = C542CC391886C7A80056CF30 /* LoginHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C50E3F73187DEB8100A060BD /* Pomo */,
@@ -275,20 +312,33 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		C542CC3F1886C7A90056CF30 /* LoginHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LoginHelper.app;
+			remoteRef = C542CC3E1886C7A90056CF30 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C542CC411886C7A90056CF30 /* LoginHelperTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LoginHelperTests.xctest;
+			remoteRef = C542CC401886C7A90056CF30 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		C50E3F72187DEB8100A060BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C50E3FB6187DEBE600A060BD /* Highlight Icon.png in Resources */,
 				C532159A187E21EF003BAB41 /* speaker.png in Resources */,
 				C5321599187E21EF003BAB41 /* heart.png in Resources */,
-				C50E3FB5187DEBE600A060BD /* Highlight Icon Big.png in Resources */,
 				C542CBA81885EE4C0056CF30 /* UserDefaults.plist in Resources */,
 				C50E3F82187DEB8100A060BD /* InfoPlist.strings in Resources */,
 				C50E3F90187DEB8100A060BD /* Images.xcassets in Resources */,
-				C50E3FB7187DEBE600A060BD /* Icon Big.png in Resources */,
-				C50E3FB8187DEBE600A060BD /* Icon.png in Resources */,
 				C5321598187E21EF003BAB41 /* clock.png in Resources */,
 				C50E3F88187DEB8100A060BD /* Credits.rtf in Resources */,
 				C5321593187DF336003BAB41 /* PreferenceWindow.xib in Resources */,
