@@ -36,30 +36,27 @@
             <toolbar key="toolbar" implicitIdentifier="F39EFDB0-0260-4E0A-A89F-F5171EA1ACA0" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="aI9-5b-Oir">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="XNM-jV-X88"/>
-                    <toolbarItem implicitItemIdentifier="9E824ECF-269B-4AA6-990B-44C482EB3D7F" explicitItemIdentifier="general" label="General" paletteLabel="General" image="clock" selectable="YES" id="dG4-uw-riE">
-                        <size key="minSize" width="60" height="0.0"/>
+                    <toolbarItem implicitItemIdentifier="9BA38B39-62CE-4131-9B2E-EFF594B67AAC" explicitItemIdentifier="general" label="General" paletteLabel="General" image="clock" selectable="YES" id="1Lu-KF-GsU">
                         <connections>
-                            <action selector="switchView:" target="-2" id="Y4m-sG-ISl"/>
+                            <action selector="switchView:" target="-2" id="2IK-o1-tvn"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="5A404978-2BCA-4C6E-B3A4-D892FD60914F" explicitItemIdentifier="audio" label="Audio" paletteLabel="Audio" tag="1" image="speaker" selectable="YES" id="Qla-G7-8k9">
-                        <size key="minSize" width="60" height="0.0"/>
+                    <toolbarItem implicitItemIdentifier="A65EEB7A-0EAB-491B-ABB8-F5698ADE6781" explicitItemIdentifier="audio" label="Audio" paletteLabel="Audio" tag="1" image="speaker" selectable="YES" id="FmI-uB-w0l">
                         <connections>
-                            <action selector="switchView:" target="-2" id="sly-r9-Tmn"/>
+                            <action selector="switchView:" target="-2" id="89b-fH-omw"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="DF5AE782-5155-44C6-961E-629A9A1AB57E" explicitItemIdentifier="about" label="About" paletteLabel="About" tag="2" image="heart" selectable="YES" id="EXF-Fj-PFL">
-                        <size key="minSize" width="60" height="0.0"/>
+                    <toolbarItem implicitItemIdentifier="54B25AB1-FBEB-42CF-97FC-57A69493AD84" explicitItemIdentifier="about" label="About" paletteLabel="About" tag="2" image="heart" selectable="YES" id="RNK-Pf-cPb">
                         <connections>
-                            <action selector="switchView:" target="-2" id="BoP-9G-IjJ"/>
+                            <action selector="switchView:" target="-2" id="1LK-Hr-Joy"/>
                         </connections>
                     </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
-                    <toolbarItem reference="dG4-uw-riE"/>
-                    <toolbarItem reference="Qla-G7-8k9"/>
+                    <toolbarItem reference="1Lu-KF-GsU"/>
+                    <toolbarItem reference="FmI-uB-w0l"/>
                     <toolbarItem reference="XNM-jV-X88"/>
-                    <toolbarItem reference="EXF-Fj-PFL"/>
+                    <toolbarItem reference="RNK-Pf-cPb"/>
                 </defaultToolbarItems>
             </toolbar>
         </window>
