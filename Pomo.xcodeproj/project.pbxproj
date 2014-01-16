@@ -20,9 +20,6 @@
 		C50E3FBC187DEC8100A060BD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50E3FBB187DEC8100A060BD /* MainMenu.xib */; };
 		C5321592187DF336003BAB41 /* PreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5321590187DF336003BAB41 /* PreferenceWindowController.m */; };
 		C5321593187DF336003BAB41 /* PreferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5321591187DF336003BAB41 /* PreferenceWindow.xib */; };
-		C5321598187E21EF003BAB41 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321595187E21EF003BAB41 /* clock.png */; };
-		C5321599187E21EF003BAB41 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321596187E21EF003BAB41 /* heart.png */; };
-		C532159A187E21EF003BAB41 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321597187E21EF003BAB41 /* speaker.png */; };
 		C542CBA81885EE4C0056CF30 /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C542CBA71885EE4C0056CF30 /* UserDefaults.plist */; };
 		C542CBF81886C5A30056CF30 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C542CBF71886C5A30056CF30 /* ServiceManagement.framework */; };
 		C542CC421886C7BE0056CF30 /* LoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = C542CC3F1886C7A90056CF30 /* LoginHelper.app */; };
@@ -89,9 +86,6 @@
 		C532158F187DF336003BAB41 /* PreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceWindowController.h; sourceTree = "<group>"; };
 		C5321590187DF336003BAB41 /* PreferenceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceWindowController.m; sourceTree = "<group>"; };
 		C5321591187DF336003BAB41 /* PreferenceWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferenceWindow.xib; sourceTree = "<group>"; };
-		C5321595187E21EF003BAB41 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
-		C5321596187E21EF003BAB41 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
-		C5321597187E21EF003BAB41 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		C542CBA71885EE4C0056CF30 /* UserDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserDefaults.plist; sourceTree = "<group>"; };
 		C542CBF71886C5A30056CF30 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		C542CC391886C7A80056CF30 /* LoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoginHelper.xcodeproj; path = LoginHelper/LoginHelper.xcodeproj; sourceTree = "<group>"; };
@@ -171,7 +165,6 @@
 				C5321590187DF336003BAB41 /* PreferenceWindowController.m */,
 				C542CBA71885EE4C0056CF30 /* UserDefaults.plist */,
 				C5321591187DF336003BAB41 /* PreferenceWindow.xib */,
-				C5321594187E0615003BAB41 /* Images */,
 				C50E3F8F187DEB8100A060BD /* Images.xcassets */,
 				C50E3F7E187DEB8100A060BD /* Supporting Files */,
 			);
@@ -208,16 +201,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C5321594187E0615003BAB41 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				C5321595187E21EF003BAB41 /* clock.png */,
-				C5321596187E21EF003BAB41 /* heart.png */,
-				C5321597187E21EF003BAB41 /* speaker.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		C542CC3A1886C7A80056CF30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +220,7 @@
 				C50E3F70187DEB8100A060BD /* Sources */,
 				C50E3F71187DEB8100A060BD /* Frameworks */,
 				C50E3F72187DEB8100A060BD /* Resources */,
+				C542CBF51886C5250056CF30 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -334,12 +318,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C532159A187E21EF003BAB41 /* speaker.png in Resources */,
-				C5321599187E21EF003BAB41 /* heart.png in Resources */,
 				C542CBA81885EE4C0056CF30 /* UserDefaults.plist in Resources */,
 				C50E3F82187DEB8100A060BD /* InfoPlist.strings in Resources */,
 				C50E3F90187DEB8100A060BD /* Images.xcassets in Resources */,
-				C5321598187E21EF003BAB41 /* clock.png in Resources */,
 				C50E3F88187DEB8100A060BD /* Credits.rtf in Resources */,
 				C5321593187DF336003BAB41 /* PreferenceWindow.xib in Resources */,
 				C50E3FBC187DEC8100A060BD /* MainMenu.xib in Resources */,
