@@ -40,7 +40,7 @@
                         <action selector="showPreferences:" target="494" id="vRx-hi-GOq"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Quit" id="hrA-MT-mxz">
+                <menuItem title="Quit Pomo" id="hrA-MT-mxz">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="terminate:" target="-1" id="Sbv-Le-lCY"/>
