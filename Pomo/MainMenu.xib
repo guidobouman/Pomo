@@ -13,20 +13,25 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="494" customClass="AppDelegate">
             <connections>
+                <outlet property="breakMenuItem" destination="9sE-QP-QNU" id="dsw-XH-z87"/>
                 <outlet property="statusMenu" destination="5RO-m0-sRZ" id="dqP-wx-2iL"/>
+                <outlet property="workMenuItem" destination="YQx-mH-UC8" id="DgA-ri-9Kx"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="5RO-m0-sRZ">
             <items>
-                <menuItem title="Start" id="YQx-mH-UC8">
+                <menuItem title="Start work session" id="YQx-mH-UC8">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleWork:" target="494" id="NA5-x8-hx8"/>
+                    </connections>
                 </menuItem>
-                <menuItem title="Break" id="9sE-QP-QNU">
+                <menuItem title="Start break session" id="9sE-QP-QNU">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem title="Stop" id="1xj-26-Kcm">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleBreak:" target="494" id="tom-fc-Wwq"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="6NQ-K2-0PZ"/>
                 <menuItem title="Preferences..." id="49d-7J-lV9">

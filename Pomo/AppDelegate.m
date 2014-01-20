@@ -16,7 +16,6 @@
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:statusMenu];
     [statusItem setHighlightMode:YES];
-    [statusItem setTitle:@"0:00"];
     
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self
@@ -28,7 +27,11 @@
         preferenceWindowController = [[PreferenceWindowController alloc] init];
     }
     
-//    [self showPreferences:nil];
+    isRunning = false;
+    isBreak = false;
+    
+    workTitleAttributes = [NSDictionary dictionaryWithObject:[NSColor blackColor] forKey:NSForegroundColorAttributeName];
+    breakTitleAttributes = [NSDictionary dictionaryWithObject:[NSColor redColor] forKey:NSForegroundColorAttributeName];
     
 }
 
@@ -56,8 +59,102 @@
     breakSound = [defaults boolForKey:@"breakSound"];
     outputVolume = (int)[defaults integerForKey:@"outputVolume"];
     
+    if(!isRunning) {
+        NSString *theTime = [self timeFormatted:workDuration * 60];
+        [statusItem setTitle:theTime];
+    }
     
-//    NSLog(@"Output volume: %i", outputVolume);
+}
+
+- (NSString *)timeFormatted:(int)totalSeconds
+{
+    
+    int seconds = totalSeconds % 60;
+    int minutes = (totalSeconds / 60);
+    
+    return [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
+}
+
+- (IBAction)toggleWork:(id)sender {
+    
+    if(!isRunning || isBreak) {
+        [self startTimer:false];
+    }
+    else {
+        [self stopTimer];
+    }
+    
+    [self updateStatusItem];
+    
+}
+
+- (IBAction)toggleBreak:(id)sender {
+    
+    if(!isRunning || !isBreak) {
+        [self startTimer:true];
+    }
+    else {
+        [self stopTimer];
+    }
+    
+    [self updateStatusItem];
+    
+}
+
+- (void)startTimer:(BOOL)toBreak {
+    
+    isRunning = true;
+    isBreak = toBreak;
+    
+    [menuTimer invalidate];
+    
+    menuTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                 target:self
+                                               selector:@selector(tick:)
+                                               userInfo:nil
+                                                repeats:YES];
+    [self tick:menuTimer];
+    
+}
+
+- (void)stopTimer {
+    
+    isRunning = false;
+    isBreak = false;
+    
+    [menuTimer invalidate];
+    
+    [statusItem setTitle:[self timeFormatted:workDuration * 60]];
+    
+}
+
+- (void)updateStatusItem {
+    
+    if(isRunning) {
+        if(isBreak) {
+            [workMenuItem setTitle:@"Start work session"];
+            [breakMenuItem setTitle:@"Stop break timer"];
+        }
+        else {
+            [workMenuItem setTitle:@"Stop work timer"];
+            [breakMenuItem setTitle:@"Start break session"];
+        }
+    }
+    else {
+        [workMenuItem setTitle:@"Start work session"];
+        [breakMenuItem setTitle:@"Start break session"];
+    }
+    
+}
+
+- (void)tick:(NSTimer*)timer {
+    
+    if(isBreak) {
+        NSLog(@"Break!");
+    }
+    else {
+        NSLog(@"Work!");
+    }
     
 }
 

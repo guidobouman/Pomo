@@ -12,14 +12,6 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     
-    PreferenceWindowController *preferenceWindowController;
-    
-    IBOutlet NSMenu *statusMenu;
-    NSStatusItem *statusItem;
-    NSImage *statusImage;
-    NSImage *statusHighlightImage;
-    
-    
     int workDuration;
     int breakDuration;
     int repeatSessions;
@@ -29,9 +21,26 @@
     int breakSound;
     int outputVolume;
     
+    NSStatusItem *statusItem;
+    IBOutlet NSMenu *statusMenu;
+    IBOutlet NSMenuItem *workMenuItem;
+    IBOutlet NSMenuItem *breakMenuItem;
+    
+    PreferenceWindowController *preferenceWindowController;
+    
+    bool isRunning;
+    bool isBreak;
+    
+    NSDictionary *workTitleAttributes;
+    NSDictionary *breakTitleAttributes;
+    NSAttributedString *statusTitle;
+    
+    NSTimer *menuTimer;
+    
 }
 
 - (IBAction)showPreferences:(id)sender;
 - (void)loadPreferences:(NSUserDefaults *)defaults;
+- (NSString *)timeFormatted:(int)totalSeconds;
 
 @end
