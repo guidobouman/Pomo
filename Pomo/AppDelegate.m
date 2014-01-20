@@ -17,6 +17,8 @@
     [statusItem setMenu:statusMenu];
     [statusItem setHighlightMode:YES];
     
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self
                selector:@selector(defaultsChanged:)
@@ -30,6 +32,10 @@
     isRunning = false;
     isBreak = false;
     
+}
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification{
+    return YES;
 }
 
 - (IBAction)showPreferences:(id)sender {
@@ -155,6 +161,10 @@
     [self setStatusBarTitle:[self timeFormatted:timeLeft]];
     
     if(timeLeft < 0) {
+        
+        NSString *message = isBreak ? @"Break is over, back to work." : @"Work is done, time for a break.";
+        [self showNotification:@"Time's up!" withMessage:message];
+        
         if(repeatSessions || !isBreak) {
             [self startTimer:!isBreak];
         }
@@ -175,6 +185,17 @@
                                 nil];
     
     [statusItem setAttributedTitle:[[NSAttributedString alloc] initWithString:value attributes:attributes]];
+    
+}
+
+- (void)showNotification:(NSString *)title withMessage:(NSString *)description {
+    
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    notification.title = title;
+    notification.informativeText = description;
+    notification.soundName = NSUserNotificationDefaultSoundName;
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     
 }
 

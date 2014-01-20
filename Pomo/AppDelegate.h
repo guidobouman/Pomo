@@ -10,7 +10,7 @@
 
 @class PreferenceWindowController;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
     
     int workDuration;
     int breakDuration;
@@ -37,7 +37,5 @@
 }
 
 - (IBAction)showPreferences:(id)sender;
-- (void)loadPreferences:(NSUserDefaults *)defaults;
-- (NSString *)timeFormatted:(int)totalSeconds;
 
 @end
