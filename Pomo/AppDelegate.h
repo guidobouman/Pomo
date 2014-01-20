@@ -31,11 +31,8 @@
     bool isRunning;
     bool isBreak;
     
-    NSDictionary *workTitleAttributes;
-    NSDictionary *breakTitleAttributes;
-    NSAttributedString *statusTitle;
-    
     NSTimer *menuTimer;
+    NSDate *targetTime;
     
 }
 

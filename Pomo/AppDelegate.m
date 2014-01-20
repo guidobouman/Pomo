@@ -30,9 +30,6 @@
     isRunning = false;
     isBreak = false;
     
-    workTitleAttributes = [NSDictionary dictionaryWithObject:[NSColor blackColor] forKey:NSForegroundColorAttributeName];
-    breakTitleAttributes = [NSDictionary dictionaryWithObject:[NSColor redColor] forKey:NSForegroundColorAttributeName];
-    
 }
 
 - (IBAction)showPreferences:(id)sender {
@@ -61,7 +58,7 @@
     
     if(!isRunning) {
         NSString *theTime = [self timeFormatted:workDuration * 60];
-        [statusItem setTitle:theTime];
+        [self setStatusBarTitle:theTime];
     }
     
 }
@@ -84,8 +81,6 @@
         [self stopTimer];
     }
     
-    [self updateStatusItem];
-    
 }
 
 - (IBAction)toggleBreak:(id)sender {
@@ -97,14 +92,15 @@
         [self stopTimer];
     }
     
-    [self updateStatusItem];
-    
 }
 
 - (void)startTimer:(BOOL)toBreak {
     
     isRunning = true;
     isBreak = toBreak;
+    
+    NSTimeInterval targetSeconds = (isBreak ? breakDuration : workDuration) * 60;
+    targetTime = [[NSDate alloc] initWithTimeIntervalSinceNow:targetSeconds];
     
     [menuTimer invalidate];
     
@@ -113,7 +109,10 @@
                                                selector:@selector(tick:)
                                                userInfo:nil
                                                 repeats:YES];
+    
     [self tick:menuTimer];
+    
+    [self updateStatusItem];
     
 }
 
@@ -124,7 +123,9 @@
     
     [menuTimer invalidate];
     
-    [statusItem setTitle:[self timeFormatted:workDuration * 60]];
+    [self setStatusBarTitle:[self timeFormatted:workDuration * 60]];
+    
+    [self updateStatusItem];
     
 }
 
@@ -133,10 +134,10 @@
     if(isRunning) {
         if(isBreak) {
             [workMenuItem setTitle:@"Start work session"];
-            [breakMenuItem setTitle:@"Stop break timer"];
+            [breakMenuItem setTitle:@"Stop break session"];
         }
         else {
-            [workMenuItem setTitle:@"Stop work timer"];
+            [workMenuItem setTitle:@"Stop work session"];
             [breakMenuItem setTitle:@"Start break session"];
         }
     }
@@ -149,12 +150,31 @@
 
 - (void)tick:(NSTimer*)timer {
     
-    if(isBreak) {
-        NSLog(@"Break!");
+    NSTimeInterval timeLeft = [targetTime timeIntervalSinceNow];
+    
+    [self setStatusBarTitle:[self timeFormatted:timeLeft]];
+    
+    if(timeLeft < 0) {
+        if(repeatSessions || !isBreak) {
+            [self startTimer:!isBreak];
+        }
+        else {
+            [self stopTimer];
+        }
     }
-    else {
-        NSLog(@"Work!");
-    }
+    
+}
+
+- (void)setStatusBarTitle:(NSString *)value {
+    
+    
+    NSColor *textColor = isBreak ? [NSColor redColor] : [NSColor blackColor];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                textColor, NSForegroundColorAttributeName,
+                                [NSFont menuBarFontOfSize:0], NSFontAttributeName,
+                                nil];
+    
+    [statusItem setAttributedTitle:[[NSAttributedString alloc] initWithString:value attributes:attributes]];
     
 }
 
