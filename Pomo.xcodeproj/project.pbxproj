@@ -22,7 +22,7 @@
 		C5321593187DF336003BAB41 /* PreferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5321591187DF336003BAB41 /* PreferenceWindow.xib */; };
 		C542CBA81885EE4C0056CF30 /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C542CBA71885EE4C0056CF30 /* UserDefaults.plist */; };
 		C542CBF81886C5A30056CF30 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C542CBF71886C5A30056CF30 /* ServiceManagement.framework */; };
-		C542CC421886C7BE0056CF30 /* LoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = C542CC3F1886C7A90056CF30 /* LoginHelper.app */; };
+		C542CC421886C7BE0056CF30 /* LoginHelper.app in Copy LoginHelper */ = {isa = PBXBuildFile; fileRef = C542CC3F1886C7A90056CF30 /* LoginHelper.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C542CBF51886C5250056CF30 /* CopyFiles */ = {
+		C542CBF51886C5250056CF30 /* Copy LoginHelper */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 7;
 			files = (
-				C542CC421886C7BE0056CF30 /* LoginHelper.app in CopyFiles */,
+				C542CC421886C7BE0056CF30 /* LoginHelper.app in Copy LoginHelper */,
 			);
+			name = "Copy LoginHelper";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -220,7 +221,7 @@
 				C50E3F70187DEB8100A060BD /* Sources */,
 				C50E3F71187DEB8100A060BD /* Frameworks */,
 				C50E3F72187DEB8100A060BD /* Resources */,
-				C542CBF51886C5250056CF30 /* CopyFiles */,
+				C542CBF51886C5250056CF30 /* Copy LoginHelper */,
 			);
 			buildRules = (
 			);
